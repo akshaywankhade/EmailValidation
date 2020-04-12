@@ -2,7 +2,8 @@
 
 #EMAIL ID VALIDATION
 read -p "Enter Email ID: " email
-PatternEmail="^[a-z]{5,}@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}).([a-zA-Z_\+\-]{2,5}$"
+PatternEmail="^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+		+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"
 
 if [[ $email =~ $PatternEmail ]]
 then
